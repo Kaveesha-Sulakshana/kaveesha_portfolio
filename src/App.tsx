@@ -12,6 +12,9 @@ import { Contact } from './components/sections/Contact';
 import { Philosophy } from './components/sections/Philosophy';
 import { Footer } from './components/Footer';
 import { SplashScreen } from './components/SplashScreen';
+import { AudioPlayer } from './components/AudioPlayer';
+
+
 export function App() {
   const [showSplash, setShowSplash] = useState(true);
   useEffect(() => {
@@ -33,6 +36,7 @@ export function App() {
         <FacebookPages />
         <Philosophy />
         <Contact />
+        <AudioPlayer />
       </main>
       <Footer />
     </div>;

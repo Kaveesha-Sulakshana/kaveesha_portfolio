@@ -6,7 +6,7 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <div className="text-xl font-medium tracking-wider text-white">
-              <span className="text-[#6EC6B0]">K</span>S
+              K<span className="text-[#6EC6B0]">S</span>Z
             </div>
           </div>
           <div className="text-sm text-gray-400">

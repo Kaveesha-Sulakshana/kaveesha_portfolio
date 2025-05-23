@@ -1,11 +1,17 @@
-import React, { useEffect, useRef } from 'react';
-import { CodeIcon, BoxIcon, DatabaseIcon, BrainIcon, PaletteIcon, GithubIcon, MonitorIcon, SmartphoneIcon, ServerIcon, FigmaIcon } from 'lucide-react';
+import React, { useRef } from 'react';
+import { motion } from 'framer-motion';
+import {
+  CodeIcon, BoxIcon, DatabaseIcon, BrainIcon, PaletteIcon,
+  GithubIcon, MonitorIcon, SmartphoneIcon, ServerIcon, FigmaIcon
+} from 'lucide-react';
+
 type Skill = {
   name: string;
   icon: React.ReactNode;
   category: string;
   color: string;
 };
+
 export const Tools = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const skills: Record<string, Skill[]> = {
@@ -109,29 +115,41 @@ export const Tools = () => {
       color: '#4479a1'
     }]
   };
-  return <section id="tools" ref={sectionRef} className="min-h-screen py-20">
+ return (
+    <section id="tools" ref={sectionRef} className="min-h-screen py-20">
       <h2 className="text-3xl sm:text-4xl font-light mb-16 tracking-tight">
-        Skills & <span className="text-[#6EC6B0]">Technologies</span>
+        Skills & <span className="text-[#6EC6B0] font-bold">Technologies</span>
       </h2>
       <div className="grid gap-16">
-        {Object.entries(skills).map(([category, items]) => <div key={category}>
+        {Object.entries(skills).map(([category, items]) => (
+          <div key={category}>
             <h3 className="text-xl font-light mb-8 flex items-center">
               <BrainIcon size={20} className="mr-2 text-[#6EC6B0]" />
               {category}
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-              {items.map((skill, index) => <div key={index} className="p-4 bg-[#30382F]/30 rounded-lg hover:bg-[#30382F]/50 transition-all duration-300 transform hover:scale-105">
+              {items.map((skill, index) => (
+                <motion.div
+                  key={index}
+                  className="p-4 bg-[#30382F]/30 rounded-lg hover:bg-[#30382F]/50 cursor-pointer"
+                  initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  whileHover={{ scale: 1.1, rotateX: 5, rotateY: -5 }}
+                  transition={{ duration: 0.4, ease: 'easeOut' }}
+                  viewport={{ once: true }}
+                >
                   <div className="flex items-center space-x-3">
-                    <div className="text-[#6EC6B0]" style={{
-                color: skill.color
-              }}>
+                    <div style={{ color: skill.color }}>
                       {skill.icon}
                     </div>
                     <span className="text-sm">{skill.name}</span>
                   </div>
-                </div>)}
+                </motion.div>
+              ))}
             </div>
-          </div>)}
+          </div>
+        ))}
       </div>
-    </section>;
+    </section>
+  );
 };

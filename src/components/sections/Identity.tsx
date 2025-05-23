@@ -65,13 +65,13 @@ export const Identity = () => {
             Designer & Developer
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-light mb-4 tracking-tight">
-            Kaveesha Sulakshana
+            Kaveesha <span className="text-[#6EC6B0] font-bold">SULAKSHANA</span>
           </h1>
           <h2 className="text-xl sm:text-2xl md:text-3xl text-gray-400 mb-8">
             UI/UX Designer & Frontend Developer
           </h2>
           <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mb-8">
-            Crafting Calm Interfaces for Human-Centric Products.
+            Crafting Modern Interfaces for Human-Centric Products.
           </p>
 
           <div className="flex gap-4">
