@@ -21,7 +21,7 @@ export const Header = () => {
   return <header className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${isScrolled ? 'bg-black/80 backdrop-blur-sm py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         <div className="text-xl font-medium tracking-wider text-white">
-          <span className="text-[#6EC6B0]">K</span>S
+          <span className="text-[#6EC6B0]">K</span>SZ
         </div>
         <div className="hidden md:flex items-center space-x-8">
           {['about', 'tools', 'projects', 'pages', 'contact'].map(item => <button key={item} onClick={() => scrollToSection(item)} className="text-sm uppercase tracking-wider text-gray-300 hover:text-[#6EC6B0] transition-colors">

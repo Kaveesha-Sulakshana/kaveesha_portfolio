@@ -1,17 +1,48 @@
 import React, { useEffect, useRef } from 'react';
 import { DnaAnimation } from '../DnaAnimation';
+import {
+  MailIcon,
+  PhoneIcon,
+  GithubIcon,
+  LinkedinIcon,
+  InstagramIcon,
+  SendIcon
+} from 'lucide-react';
+
 export const Identity = () => {
   const sectionRef = useRef<HTMLElement>(null);
+
+  const socialLinks = [
+    {
+      name: 'GitHub',
+      icon: <GithubIcon size={30} />,
+      url: 'https://github.com/Kaveesha-2003'
+    },
+    {
+      name: 'LinkedIn',
+      icon: <LinkedinIcon size={30} />,
+      url: 'https://www.linkedin.com/in/kaveesha-sulakshana-6b486b310/'
+    },
+    {
+      name: 'Instagram',
+      icon: <InstagramIcon size={30} />,
+      url: 'https://www.instagram.com/kavee_zz_a'
+    }
+  ];
+
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-fade-in');
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in');
+          }
+        });
+      },
+      {
+        threshold: 0.1
+      }
+    );
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
@@ -21,9 +52,15 @@ export const Identity = () => {
       }
     };
   }, []);
-  return <section id="about" ref={sectionRef} className="min-h-screen flex flex-col justify-center items-start pt-20 opacity-0 transition-opacity duration-1000 relative overflow-hidden">
+
+  return (
+    <section
+      id="about"
+      ref={sectionRef}
+      className="min-h-screen flex flex-col justify-center items-start pt-20 opacity-0 transition-opacity duration-1000 relative overflow-hidden"
+    >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
-        <div className="max-w-xl mt-20 ">
+        <div className="max-w-xl mt-20">
           <div className="inline-block mb-2 px-3 py-1 bg-[#30382F] text-[#6EC6B0] text-xs uppercase tracking-widest rounded-full">
             Designer & Developer
           </div>
@@ -33,21 +70,30 @@ export const Identity = () => {
           <h2 className="text-xl sm:text-2xl md:text-3xl text-gray-400 mb-8">
             UI/UX Designer & Frontend Developer
           </h2>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mb-12">
+          <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mb-8">
             Crafting Calm Interfaces for Human-Centric Products.
           </p>
-          <div className="flex flex-wrap gap-4">
-            <button className="px-6 py-3 bg-[#6EC6B0] text-black rounded-full hover:bg-[#6EC6B0]/80 transition-colors">
-              View Projects
-            </button>
-            <button className="px-6 py-3 border border-[#6EC6B0] text-[#6EC6B0] rounded-full hover:bg-[#6EC6B0]/10 transition-colors">
-              Contact Me
-            </button>
+
+          <div className="flex gap-4">
+            {socialLinks.map(link => (
+              <a
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-[#6EC6B0] transition-colors"
+                aria-label={link.name}
+              >
+                {link.icon}
+              </a>
+            ))}
           </div>
         </div>
+
         <div className="relative hidden lg:block h-[600px] overflow-hidden">
           <DnaAnimation />
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
