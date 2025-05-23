@@ -23,7 +23,7 @@ export const Identity = () => {
   }, []);
   return <section id="about" ref={sectionRef} className="min-h-screen flex flex-col justify-center items-start pt-20 opacity-0 transition-opacity duration-1000 relative overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
-        <div className="max-w-xl mt-20 ml-40">
+        <div className="max-w-xl mt-20 ">
           <div className="inline-block mb-2 px-3 py-1 bg-[#30382F] text-[#6EC6B0] text-xs uppercase tracking-widest rounded-full">
             Designer & Developer
           </div>
