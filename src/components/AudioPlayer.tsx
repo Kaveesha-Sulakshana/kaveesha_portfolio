@@ -35,7 +35,7 @@ export const AudioPlayer = () => {
         onClick={toggleMute}
         className="bg-black/70 text-white border border-white rounded-full px-4 py-2 shadow-md hover:bg-white hover:text-black transition"
       >
-        {isMuted ? '🔇 Music' : '🔊 Music'}
+        {isMuted ? '🔇 Get space experience' : '🔊 Back to Earth'}
       </button>
       <audio ref={audioRef} src="/audio/space-music.mp3" autoPlay muted />
     </div>
