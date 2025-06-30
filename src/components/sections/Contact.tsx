@@ -71,7 +71,7 @@ const handleSubmit = (e: React.FormEvent) => {
   const socialLinks = [{
     name: 'GitHub',
     icon: <GithubIcon size={20} />,
-    url: 'https://github.com/Kaveesha-2003'
+    url: 'https://github.com/Kaveesha-Sulakshana'
   }, {
     name: 'LinkedIn',
     icon: <LinkedinIcon size={20} />,
