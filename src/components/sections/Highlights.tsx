@@ -38,7 +38,7 @@ export default function Highlights() {
   return (
     <section className="p-6 text-center">
        <h2 className="text-3xl sm:text-4xl font-light mb-16 tracking-tight">
-        Captured  <span className="text-[#6EC6B0]">Milestones</span>
+        Career   <span className="text-[#6EC6B0]">Milestones</span>
       </h2>
       <div
         className="relative w-full max-w-4xl h-96 mx-auto rounded-xl overflow-hidden shadow-lg cursor-pointer"

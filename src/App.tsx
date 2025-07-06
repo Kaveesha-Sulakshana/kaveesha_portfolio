@@ -14,6 +14,8 @@ import { Footer } from './components/Footer';
 import { SplashScreen } from './components/SplashScreen';
 import { AudioPlayer } from './components/AudioPlayer';
 import Highlights from "./components/sections/Highlights";
+import { CreativeWorks } from './components/sections/CreativeWorks';
+
 
 
 export function App() {
@@ -37,6 +39,7 @@ export function App() {
         <FacebookPages />
         <Philosophy />
         <Highlights />
+        <CreativeWorks />
         <Contact />
         
         <AudioPlayer />

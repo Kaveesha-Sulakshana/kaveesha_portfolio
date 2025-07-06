@@ -16,7 +16,7 @@ export const Identity = () => {
     {
       name: 'GitHub',
       icon: <GithubIcon size={30} />,
-      url: 'https://github.com/Kaveesha-2003'
+      url: 'https://github.com/Kaveesha-Sulakshana'
     },
     {
       name: 'LinkedIn',
