@@ -13,6 +13,7 @@ import { Philosophy } from './components/sections/Philosophy';
 import { Footer } from './components/Footer';
 import { SplashScreen } from './components/SplashScreen';
 import { AudioPlayer } from './components/AudioPlayer';
+import Highlights from "./components/sections/Highlights";
 
 
 export function App() {
@@ -35,7 +36,9 @@ export function App() {
         <Achievements />
         <FacebookPages />
         <Philosophy />
+        <Highlights />
         <Contact />
+        
         <AudioPlayer />
       </main>
       <Footer />
