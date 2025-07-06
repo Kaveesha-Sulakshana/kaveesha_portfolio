@@ -22,7 +22,7 @@ export const SplashScreen = ({
 <img
   src="/sinhala_logo/s_logo.png"
   alt="Logo"
-  className="w-[330px] h-auto mx-auto mb-2"
+  className="w-[150px] h-auto mx-auto mb-2"
 />
 
 
