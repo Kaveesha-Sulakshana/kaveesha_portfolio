@@ -71,7 +71,7 @@ export const Identity = () => {
             UI/UX Designer & Frontend Developer
           </h2>
           <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mb-8">
-            Crafting Modern Interfaces for Human-Centric Products.
+            Driven by design and powered by code, I create digital experiences that reflect the user’s vision and feel effortlessly natural. Every interface I build is crafted with purpose balancing creativity, clarity, and seamless interaction.
           </p>
 
           <div className="flex gap-4">
